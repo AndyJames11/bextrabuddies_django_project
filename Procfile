@@ -1,1 +1,1 @@
-web: gunicorn bextrabuddies_django_project.wsgi
+web: gunicorn bextrabuddies_django.wsgi
