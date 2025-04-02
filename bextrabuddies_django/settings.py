@@ -31,7 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'bextra-buddies-6bb50cec51fc.herokuapp.com']
-ALLOWED_HOSTS = []
 
 
 # Application definition
