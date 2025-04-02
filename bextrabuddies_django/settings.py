@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'bextra-buddies-6bb50cec51fc.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -190,7 +191,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'bextra-buddies' # change this to your AWS bucket name
     AWS_S3_REGION_NAME = 'eu-north-1'
