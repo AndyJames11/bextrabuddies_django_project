@@ -141,12 +141,9 @@ WSGI_APPLICATION = 'bextrabuddies_django.wsgi.application'
 #      }
 #  }
 
-import dj_database_url
-
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -229,3 +226,6 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if os.getenv("RENDER") or os.getenv("DYNO"):
+    SECURE_SSL_REDIRECT = True
