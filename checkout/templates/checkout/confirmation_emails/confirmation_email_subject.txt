@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+Bextra Buddies Confirmation for Order Number {{ order.order_number }}
