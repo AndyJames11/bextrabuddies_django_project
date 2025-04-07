@@ -1,131 +1,326 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BextraBuddies - Django Project
 
-Welcome USER_NAME,
+**BextraBuddies** is a full-stack e-commerce web application developed using the Django framework and PostgreSQL for my final CodeInstitute project. It is designed for people to browse, review, and purchase a variety of different products. The application includes secure user authentication, shopping functionality, a wishlist system, Stripe payment integration, and a clean, responsive user interface.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+**Live Site:** [BextraBuddies](https://bextra-buddies-6bb50cec51fc.herokuapp.com)  
+**Repository:** [Github](https://github.com/AndyJames11/bextrabuddies_django_project)
 
 ---
 
-Happy coding!
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [User Experience (UX)](#user-experience-ux)
+- [Technologies Used](#technologies-used)
+- [Models Overview](#models-overview)
+- [Database Scheme Overview](#database-schema-overview)
+- [Testing](#testing)
+- [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Installation and Local Setup](#installation-and-local-setup)
+- [Media and Assets](#media-and-assets)
+- [Acknowledgements](#acknowledgements)
+
+---
+
+## Project Overview
+
+BextraBuddies is an e-commerce platform focused on a variety of products. It was developed as part of my final college project to create a scalable Django application, integrating third-party services such as Stripe for payments and AWS S3 for static and media file hosting. The project supports full CRUD functionality for admins, user profiles, review systems, and a custom wishlist.
+
+---
+
+## Features
+
+### Core Functionality
+
+- Browse all products or filter by category
+- View detailed product pages with images, pricing, and reviews
+- Register, log in, and manage user profiles
+- Add or remove products from the shopping cart
+- Save and remove items in your personal Wishlist
+- Complete purchases securely via Stripe checkout
+- Product review system with star ratings
+- Review order history and save default delivery information
+- Confirmation emails sent on successful order completion
+- Add and manage products through the Django admin panel
+
+---
+
+## User Experience (UX)
+
+### User Stories
+
+**Visitor Goals**
+
+- View available products with ease
+- Learn more about individual items
+- Register for an account if needed
+
+**Authenticated User Goals**
+
+- Add products to wishlist and cart
+- Checkout securely with saved address details
+- Submit product reviews
+- Manage personal information and view order history
+
+**Admin Goals**
+
+- Add, edit, and delete product listings
+- View and manage orders placed by users
+
+### Design
+
+- The interface uses Bootstrap 5 with custom CSS for consistency and branding
+- Clear call-to-action buttons and navigation
+- Visual feedback on user actions (e.g. adding to wishlist or cart)
+- Simple, clean, modern design and styling to ensure easy navigation
+
+---
+
+## Technologies Used
+
+- **Languages**: HTML5, CSS3, JavaScript, Python 3
+- **Backend**: Django, Django Allauth
+- **Database**: PostgreSQL
+- **Payment Integration**: Stripe
+- **Frontend Framework**: Bootstrap 5
+- **Other Tools**:
+  - Crispy Forms for improved form rendering
+  - AWS S3 for media and static file storage
+  - Boto3 for AWS integration
+  - Gunicorn for Heroku deployment
+  - Git and GitHub for version control
+  - Heroku for application deployment
+
+---
+
+## Models Overview
+
+The core models in the BextraBuddies project are designed to support a full e-commerce workflow, from product display to user reviews and personalised wishlists. The following section outlines how the models are structured and function.
+
+### Product Model
+
+The `Product` model represents items available in the store. Each product includes standard commercial details as well as an optional category relationship.
+
+**Key Fields:**
+
+- `name`: The title of the product.
+- `sku`: A unique stock-keeping identifier.
+- `description`: A detailed explanation of the product.
+- `price`: Decimal field storing the product price.
+- `rating`: Automatically calculated average rating from user reviews.
+- `image`: An optional image uploaded for the product.
+- `category`: ForeignKey linking the product to a category.
+
+### Category Model
+
+Categories allow products to be grouped for navigation and filtering.
+
+**Key Fields:**
+
+- `name`: The category name.
+- `friendly_name`: A human-readable version used in the interface.
+
+### Order Model
+
+The `Order` model stores purchase information after a successful checkout via Stripe. It tracks payment, customer data, and totals.
+
+**Key Fields:**
+
+- `user_profile`: ForeignKey to the UserProfile.
+- `full_name`: Name from the order form.
+- `email`, `phone_number`: Contact info.
+- `address`: Shipping address fields.
+- `stripe_pid`: Stripe payment intent ID.
+- `order_total`, `grand_total`: Order cost calculations.
+- `original_bag`: A snapshot of the cart data.
+
+### OrderLineItem Model
+
+Each `OrderLineItem` represents a single product in an order. Multiple items can be linked to one order.
+
+**Key Fields:**
+
+- `order`: ForeignKey to the Order.
+- `product`: ForeignKey to the Product.
+- `quantity`: Number of units ordered.
+- `lineitem_total`: Cost of the line item.
+
+### UserProfile Model
+
+The `UserProfile` model extends the built-in Django User model, allowing additional fields to be saved per user.
+
+**Key Fields:**
+
+- `user`: OneToOneField with Django’s User.
+- `default_phone_number`, `default_country`, etc.: Saved shipping info.
+- `order_history`: Used in views to display previous orders.
+
+
+### Review Model
+
+The **Review** model allows authenticated users to leave feedback on individual products. Each review is associated with a product and a user, and contains both a numerical rating and a textual comment.
+
+**Key Fields:**
+
+- `user`: ForeignKey to Django's `User` model
+- `product`: ForeignKey to the `Product` model
+- `rating`: Integer field for 1 to 5 stars rating
+- `comment`: Text field for detailed feedback
+- `created_at`: Auto-generated timestamp when the review is created
+- `updated_at`: Auto-generated timestamp when the review is modified
+
+This model enhances user engagement and helps potential buyers make informed purchasing decisions.
+
+### WishlistItem Model
+
+The **WishlistItem** model enables users to bookmark products for future reference. It represents a many-to-many relationship between users and products through an explicit intermediate model.
+
+**Key Fields:**
+
+- `user`: ForeignKey to Django's `User` model
+- `product`: ForeignKey to the `Product` model
+- `created_on`: Timestamp when the item was added to the wishlist
+
+Wishlist functionality is powered via AJAX to allow real-time feedback without requiring full page reloads, contributing to a smoother user experience.
+
+---
+
+## Database Schema Overview
+
+This project uses Django's Object Relational Mapping with a PostgreSQL backend to manage data relationships in a relational schema. The architecture supports product browsing, user profiles, order processing, reviews, and personalised features like wishlists.
+
+### Key Relationships
+
+- **User ↔ Profile**: One-to-one relationship extending Django’s User model
+- **User ↔ Orders**: One-to-many relationship for order history
+- **Order ↔ OrderLineItem**: One-to-many relationship for storing cart items
+- **Product ↔ Review**: One-to-many; each product can have multiple reviews
+- **User ↔ WishlistItem ↔ Product**: Many-to-many relationship using an intermediary model
+
+### Schema Summary
+
+| Model           | Related Models           | Description                                            |
+|----------------|---------------------------|--------------------------------------------------------|
+| `UserProfile`   | `User` (One-to-One)       | Extended profile fields for users                     |
+| `Product`       | `Category`, `Review`      | Core item displayed in the store                      |
+| `Review`        | `User`, `Product`         | Allows users to submit ratings and comments           |
+| `WishlistItem`  | `User`, `Product`         | Tracks user-saved products                            |
+| `Order`         | `User`, `OrderLineItem`   | Represents completed purchases                        |
+| `OrderLineItem` | `Order`, `Product`        | Items within a single order, with quantity and price  |
+
+This schema supports the necessary business logic for browsing, purchasing, reviewing, and saving products, while ensuring normalized and query-optimized database performance.
+
+---
+
+## Testing
+
+### Manual Testing
+
+- Tested each user story manually
+- Verified validation for forms (e.g. review submission, checkout)
+- Ensured edge case handling (e.g. adding same item twice to wishlist)
+- Ensured webhook feedback for Stripe orders
+- Added and removed multiple products to bag to ensure all processed correctly
+
+### Validation
+
+- All templates checked with W3C validator
+- CSS validated via Jigsaw
+- JavaScript syntax validated using JSLint
+
+---
+
+## Known Bugs
+
+- Wishlist icon may flicker briefly on slower connections due to async updates
+- Product star ratings may visually misalign at certain breakpoints
+- Formatting and CSS styling not very good on smaller devices such as mobile phones 
+
+These issues have been documented and are planned for potential future refinement.
+
+---
+
+## Deployment
+
+### Live Deployment (Heroku)
+
+1. Hosted on Heroku using PostgreSQL
+2. Static and media files served via AWS S3
+3. Stripe keys and secret settings configured via Heroku Config Vars
+4. Gunicorn used as production WSGI server
+
+### Steps to Deploy
+
+1. Create a new Heroku app
+2. Connect to the GitHub repository
+3. Add Heroku Postgres as an add-on
+4. Configure environment variables:
+   - `SECRET_KEY`
+   - `DEBUG`
+   - `DATABASE_URL`
+   - `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, etc.
+5. Run `collectstatic` and `migrate` commands
+6. Application is now live at assigned Heroku URL
+
+---
+
+## Installation and Local Setup
+
+To run this project locally:
+
+1. Clone the repository
+
+   ```
+   git clone https://github.com/AndyJames11/bextrabuddies_django_project.git
+   ```
+
+2. Navigate into the directory:
+
+   ```
+   cd bextrabuddies_django_project
+   ```
+
+3. Set up a virtual environment:
+
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   ```
+
+4. Install dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+5. Apply migrations and run the server:
+
+   ```
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+6. Create a `.env` file to store environment variables and Stripe keys
+
+---
+
+## Media and Assets
+
+- Product images: [Pexels](https://www.pexels.com/)
+- Icons: [Font Awesome](https://fontawesome.com/)
+- JavaScript enhancements adapted from [W3Schools](https://www.w3schools.com/)
+
+---
+
+## Acknowledgements
+
+- Code Institute for project template and coursework structure
+- Django documentation for references and best practices
+- Stripe documentation for integration guidance
+- MDN Web Docs and Stack Overflow for technical support
+- Tutor support for project guidance and feedback
+- Friends and community support from various online developer communities
+
+---
