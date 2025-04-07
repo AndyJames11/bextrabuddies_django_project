@@ -73,6 +73,16 @@
                 <p class="my-0">My Account</p>
               </div>
             </a>
+            {% if user.is_authenticated %}
+            <li class="list-inline-item">
+              <a class="text-black nav-link" href="{% url 'view_wishlist' %}">
+                <div class="text-center">
+                  <div><i class="fas fa-heart fa-lg"></i></div>
+                  <p class="my-0">Wishlist</p>
+                </div>
+              </a>
+            </li>
+            {% endif %}            
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}

@@ -3,11 +3,64 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center top fixed;
+    background: /*url('/media/homepage_background_cropped.jpg')*/ no-repeat center top fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+}
+
+.hero-banner {
+    position: relative;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center top;
+    background-size: 70% auto;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-text-wrapper {
+    position: absolute;
+    top: 45%;
+    left: 16vw;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 500px;
+}
+
+.hero-heading {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.shop-now-button {
+    padding: 0.75rem 2rem;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+.shop-now-button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .hero-text-wrapper {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-heading {
+        color: black;
+    }
+
+    .shop-now-button {
+        font-size: 1rem;
+    }
 }
 
 /* from Bulma */
