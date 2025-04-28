@@ -62,12 +62,12 @@ BextraBuddies is an e-commerce platform focused on a variety of products. It was
 - Add products to wishlist and cart
 - Checkout securely with saved address details
 - Submit product reviews
-- Manage personal information and view order history
+- Manage personal information and view order history  | **PLANNED FEATURE** |
 
 **Admin Goals**
 
 - Add, edit, and delete product listings
-- View and manage orders placed by users
+- View and manage orders placed by users  | **PLANNED FEATURE** |
 
 ### Design
 
@@ -227,8 +227,10 @@ This schema supports the necessary business logic for browsing, purchasing, revi
 ### Validation
 
 - All templates checked with W3C validator
+![alt text](static/testing-results/html-validation.png)
+
 - CSS validated via Jigsaw
-- JavaScript syntax validated using JSLint
+![alt text](static/testing-results/css-validation.png)
 
 ---
 
